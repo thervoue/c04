@@ -1,2 +1,2 @@
 #!bin/sh
-git log -5 --prety=%H | cat -e 
+git log -5 --prety="%H" 
