@@ -6,7 +6,7 @@
 /*   By: thervoue <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/07/08 13:44:46 by thervoue     #+#   ##    ##    #+#       */
-/*   Updated: 2019/07/08 15:19:37 by thervoue    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/07/08 19:20:02 by thervoue    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,11 +19,15 @@ void	ft_putchar(char c)
 }
 
 void	ft_putnbr(int nb)
-{ll
+{
 	long i;
 
 	i = nb;
-	if (i < 0)
+	if (i == -2147483648)
+	{
+		write(1, "-2147483648", 11);
+	}
+	else if (i < 0 && i != -2147783648)
 	{
 		ft_putchar('-');
 		ft_putnbr(nb * -1);
