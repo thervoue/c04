@@ -1,43 +1,32 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_print_comb.c                                  .::    .:/ .      .::   */
+/*   ft_rev_int_tab.c                                 .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: thervoue <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/07/07 19:21:20 by thervoue     #+#   ##    ##    #+#       */
-/*   Updated: 2019/07/08 19:22:45 by thervoue    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/07/11 13:20:26 by thervoue     #+#   ##    ##    #+#       */
+/*   Updated: 2019/07/11 14:45:42 by thervoue    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_print_comb(void)
+void	ft_rev_int_tab(int *tab, int size)
 {
-	char c;
-	char d;
-	char u;
+	int i;
+	int n;
+	int temp;
 
-	u = '2' - 1;
-	d = '1' - 1;
-	c = '0' - 1;
-	while (c++ < '7')
+	n = size - 1;
+	i = 0;
+	while (i < n)
 	{
-		d = c;
-		while (d++ < '8')
-		{
-			u = d;
-			while (u++ < '9')
-			{
-				write(1, &c, 1);
-				write(1, &d, 1);
-				write(1, &u, 1);
-				if (c < '7')
-				{
-					write(1, ", ", 2);
-				}
-			}
-		}
+		temp = tab[i];
+		tab[i] = tab[n];
+		tab[n] = temp;
+		i++;
+		n--;
 	}
 }

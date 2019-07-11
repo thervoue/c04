@@ -1,44 +1,24 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_putnbr.c                                      .::    .:/ .      .::   */
+/*   ft_strlen.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: thervoue <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/07/08 13:44:46 by thervoue     #+#   ##    ##    #+#       */
-/*   Updated: 2019/07/08 19:20:02 by thervoue    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/07/10 14:49:13 by thervoue     #+#   ##    ##    #+#       */
+/*   Updated: 2019/07/11 14:44:27 by thervoue    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_putchar(char c)
+int	ft_strlen(char *str)
 {
-	write(1, &c, 1);
-}
+	int i;
 
-void	ft_putnbr(int nb)
-{
-	long i;
-
-	i = nb;
-	if (i == -2147483648)
-	{
-		write(1, "-2147483648", 11);
-	}
-	else if (i < 0 && i != -2147783648)
-	{
-		ft_putchar('-');
-		ft_putnbr(nb * -1);
-	}
-	else if (i >= 0 && i < 10)
-	{
-		ft_putchar(i + '0');
-	}
-	else
-	{
-		ft_putnbr(i / 10);
-		ft_putnbr(i % 10);
-	}
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }

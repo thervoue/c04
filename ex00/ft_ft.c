@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_print_alphabet.c                              .::    .:/ .      .::   */
+/*   ft_ft.c                                          .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: thervoue <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/07/05 13:58:25 by thervoue     #+#   ##    ##    #+#       */
-/*   Updated: 2019/07/05 16:18:12 by thervoue    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/07/09 15:47:10 by thervoue     #+#   ##    ##    #+#       */
+/*   Updated: 2019/07/09 16:45:27 by thervoue    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_alphabet(void)
+void	ft_ft(int *nbr)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	*nbr = 42;
 }
