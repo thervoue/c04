@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_putstr.c                                      .::    .:/ .      .::   */
+/*   ft_str_is_lowercase.c                            .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: thervoue <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/07/10 13:06:05 by thervoue     #+#   ##    ##    #+#       */
-/*   Updated: 2019/07/11 17:04:53 by thervoue    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/07/14 14:35:04 by thervoue     #+#   ##    ##    #+#       */
+/*   Updated: 2019/07/14 15:54:17 by thervoue    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int		ft_str_is_lowercase(char *str)
 {
-	write(1, &c, 1);
-}
-
-void	ft_putstr(char *str)
-{
-	int a;
-
-	a = 0;
-	while (str[a] != '\0')
+	while (str[0] != '\0')
 	{
-		ft_putchar(str[a]);
-		a++;
+		if (!((str[0] >= 'a' && str[0] <= 'z')))
+			return (0);
+		str++;
 	}
+	return (1);
 }

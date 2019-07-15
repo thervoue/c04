@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_ultimate_div_mod.c                            .::    .:/ .      .::   */
+/*   ft_strcpy.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: thervoue <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/07/09 17:52:47 by thervoue     #+#   ##    ##    #+#       */
-/*   Updated: 2019/07/11 14:48:14 by thervoue    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/07/12 15:08:23 by thervoue     #+#   ##    ##    #+#       */
+/*   Updated: 2019/07/14 16:31:01 by thervoue    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-void	ft_ultimate_div_mod(int *a, int *b)
+char	*ft_strcpy(char *dest, char *src)
 {
-	int c;
-	int d;
+	int i;
 
-	c = *a / *b;
-	d = *a % *b;
-	*a = c;
-	*b = d;
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
