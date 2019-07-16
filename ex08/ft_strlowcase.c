@@ -6,7 +6,7 @@
 /*   By: thervoue <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/07/15 15:49:33 by thervoue     #+#   ##    ##    #+#       */
-/*   Updated: 2019/07/15 15:55:22 by thervoue    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/07/16 12:20:28 by thervoue    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -25,10 +25,4 @@ char	*ft_strlowcase(char *str)
 		i++;
 	}
 	return (str);
-}
-
-int		main(void)
-{
-	char str[] = "TEST";
-	printf("%s\n", ft_strlowcase(str));
 }

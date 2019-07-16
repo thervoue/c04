@@ -6,7 +6,7 @@
 /*   By: thervoue <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/07/15 16:32:40 by thervoue     #+#   ##    ##    #+#       */
-/*   Updated: 2019/07/15 16:47:29 by thervoue    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/07/16 12:24:03 by thervoue    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -26,7 +26,8 @@ int		ft_check_alphanum(char c)
 char	*ft_strcapitalize(char *str)
 {
 	int i;
-		i = 0;
+
+	i = 0;
 	while (str[i])
 	{
 		if (str[i] >= 'A' && str[i] <= 'Z')
@@ -46,9 +47,4 @@ char	*ft_strcapitalize(char *str)
 	if ((str[0] >= 'a' && str[0] <= 'z') && (str[0] = '\0'))
 		str[0] -= 32;
 	return (str);
-}
-int		main(void)
-{
-	char k[] = "Bonjour 42lol 42LOL -m -M ;M ;m ";
-		printf("%s", ft_strcapitalize(k));
 }
