@@ -6,12 +6,10 @@
 /*   By: thervoue <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/07/15 16:32:40 by thervoue     #+#   ##    ##    #+#       */
-/*   Updated: 2019/07/16 12:24:03 by thervoue    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/07/16 13:24:38 by thervoue    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int		ft_check_alphanum(char c)
 {
