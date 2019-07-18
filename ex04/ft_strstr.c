@@ -6,7 +6,7 @@
 /*   By: thervoue <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/07/18 13:09:51 by thervoue     #+#   ##    ##    #+#       */
-/*   Updated: 2019/07/18 15:56:39 by thervoue    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/07/18 17:43:01 by thervoue    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -28,16 +28,9 @@ char	*ft_strstr(char *str, char *to_find)
 		{
 			j++;
 			if (to_find[j] == '\0')
-				return (&str[i]);	
+				return (&str[i]);
 		}
 		i++;
 	}
 	return (0);
-}
-
-int		main()
-{
-	char	str[] = "dgsag";
-	char	to_find[] = "s";
-	printf("%s", ft_strstr(str, to_find));
 }

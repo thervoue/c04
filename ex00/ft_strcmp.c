@@ -6,14 +6,12 @@
 /*   By: thervoue <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/07/15 18:06:42 by thervoue     #+#   ##    ##    #+#       */
-/*   Updated: 2019/07/15 20:27:11 by thervoue    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/07/18 17:36:49 by thervoue    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int ft_strcmp(char *s1, char *s2)
+int		ft_strcmp(char *s1, char *s2)
 {
 	int i;
 
@@ -27,11 +25,4 @@ int ft_strcmp(char *s1, char *s2)
 		i++;
 	}
 	return (0);
-}
-
-int		main()
-{
-	char s1[] = "abc";
-	char s2[] = "abc";
-	printf("%d\n", ft_strcmp(s1, s2));
 }
