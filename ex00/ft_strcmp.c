@@ -1,23 +1,37 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_str_is_numeric.c                              .::    .:/ .      .::   */
+/*   ft_strcmp.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: thervoue <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/07/14 14:27:14 by thervoue     #+#   ##    ##    #+#       */
-/*   Updated: 2019/07/14 15:54:41 by thervoue    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/07/15 18:06:42 by thervoue     #+#   ##    ##    #+#       */
+/*   Updated: 2019/07/15 20:27:11 by thervoue    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_str_is_numeric(char *str)
+#include <stdio.h>
+
+int ft_strcmp(char *s1, char *s2)
 {
-	while (str[0] != '\0')
+	int i;
+
+	i = 0;
+	while (s1[i] != '\0' && s2[i] != '\0')
 	{
-		if (!((str[0] >= '0' && str[0] <= '9')))
-			return (0);
-		str++;
+		if (s1[i] != s2[i])
+		{
+			return (s1[i] - s2[i]);
+		}
+		i++;
 	}
-	return (1);
+	return (0);
+}
+
+int		main()
+{
+	char s1[] = "abc";
+	char s2[] = "abc";
+	printf("%d\n", ft_strcmp(s1, s2));
 }

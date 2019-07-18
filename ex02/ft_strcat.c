@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_str_is_lowercase.c                            .::    .:/ .      .::   */
+/*   ft_strcat.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: thervoue <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/07/14 14:35:04 by thervoue     #+#   ##    ##    #+#       */
-/*   Updated: 2019/07/14 15:54:17 by thervoue    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/07/17 13:43:48 by thervoue     #+#   ##    ##    #+#       */
+/*   Updated: 2019/07/17 13:50:58 by thervoue    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_str_is_lowercase(char *str)
+char		*ft_strcat(char *dest, char *src)
 {
-	while (str[0] != '\0')
+	int i;
+	int j;
+
+	j = 0;
+	i = 0;
+	while (dest[i] != '\0')
+		i++;
+	while (src[j] != '\0')
 	{
-		if (!((str[0] >= 'a' && str[0] <= 'z')))
-			return (0);
-		str++;
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
-	return (1);
+	dest[i] = '\0';
+	return (dest);
 }

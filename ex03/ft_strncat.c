@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_str_is_alpha.c                                .::    .:/ .      .::   */
+/*   ft_strncat.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: thervoue <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/07/13 21:00:56 by thervoue     #+#   ##    ##    #+#       */
-/*   Updated: 2019/07/14 15:56:07 by thervoue    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/07/17 15:50:08 by thervoue     #+#   ##    ##    #+#       */
+/*   Updated: 2019/07/17 17:23:57 by thervoue    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_str_is_alpha(char *str)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	while (str[0] != '\0')
+	int a;
+	int b;
+
+	a = 0;
+	b = 0;
+	while (dest[a] != '\0')
+		a++;
+	while (src[b] && nb > 0)
 	{
-		if (!((str[0] >= 'A' && str[0] <= 'Z') ||
-					(str[0] >= 'a' && str[0] <= 'z')))
-			return (0);
-		str++;
+		dest[a] = src[b];
+		b++;
+		a++;
+		nb--;
 	}
-	return (1);
+	dest[a] = '\0';
+	return (dest);
 }
