@@ -6,20 +6,18 @@
 /*   By: thervoue <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/07/18 13:09:51 by thervoue     #+#   ##    ##    #+#       */
-/*   Updated: 2019/07/18 17:43:01 by thervoue    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/07/18 19:24:04 by thervoue    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
 char	*ft_strstr(char *str, char *to_find)
 {
-	int j;
-	int i;
+	int	i;
+	intj;
 
 	i = 0;
-	if (to_find == '\0')
+	if (to_find[0] == '\0')
 		return (str);
 	while (str[i] != '\0')
 	{
