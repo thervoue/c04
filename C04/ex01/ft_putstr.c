@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strcmp.c                                      .::    .:/ .      .::   */
+/*   ft_putstr.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: thervoue <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/07/15 18:06:42 by thervoue     #+#   ##    ##    #+#       */
-/*   Updated: 2019/07/18 19:08:00 by thervoue    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/07/18 18:02:17 by thervoue     #+#   ##    ##    #+#       */
+/*   Updated: 2019/07/18 18:05:15 by thervoue    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
-{
-	int i;
+#include <unistd.h>
 
-	i = 0;
-	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
-		i++;
-	return (s1[i] - s2[i]);
+void	ft_putstr(char c)
+{
+	write(1, &c, 1);
 }
+
+void	ft_putstr(char *str)
+{
+	int a;
+
+	a = 0;
+	while (str[a] != '\0')
+	{
+		ft_putchar(str[a]);
+		a++;
+	}
+}
+
